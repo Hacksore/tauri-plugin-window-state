@@ -20,4 +20,8 @@ declare function restoreState(label: WindowLabel, flags: StateFlags): Promise<vo
  *  Restore the state for the current window from disk.
  */
 declare function restoreStateCurrent(flags: StateFlags): Promise<void>;
-export { restoreState, restoreStateCurrent, saveWindowState };
+/**
+ *  Get the name of the file used to store window state.
+ */
+declare function filename(): Promise<string>;
+export { restoreState, restoreStateCurrent, saveWindowState, filename };

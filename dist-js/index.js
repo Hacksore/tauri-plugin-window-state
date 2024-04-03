@@ -32,5 +32,11 @@ async function restoreState(label, flags) {
 async function restoreStateCurrent(flags) {
     return restoreState(getCurrent().label, flags);
 }
+/**
+ *  Get the name of the file used to store window state.
+ */
+async function filename() {
+    return invoke("plugin:window-state|filename");
+}
 
-export { StateFlags, restoreState, restoreStateCurrent, saveWindowState };
+export { StateFlags, filename, restoreState, restoreStateCurrent, saveWindowState };
