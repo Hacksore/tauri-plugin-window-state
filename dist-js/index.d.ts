@@ -1,4 +1,4 @@
-import { WindowLabel } from "@tauri-apps/api/window";
+import { type WindowLabel } from "@tauri-apps/api/window";
 export declare enum StateFlags {
     SIZE = 1,
     POSITION = 2,

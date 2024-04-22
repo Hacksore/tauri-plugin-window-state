@@ -20,25 +20,25 @@ exports.StateFlags = void 0;
  *  Save the state of all open windows to disk.
  */
 async function saveWindowState(flags) {
-    return core.invoke("plugin:window-state|save_window_state", { flags });
+    await core.invoke("plugin:window-state|save_window_state", { flags });
 }
 /**
  *  Restore the state for the specified window from disk.
  */
 async function restoreState(label, flags) {
-    return core.invoke("plugin:window-state|restore_state", { label, flags });
+    await core.invoke("plugin:window-state|restore_state", { label, flags });
 }
 /**
  *  Restore the state for the current window from disk.
  */
 async function restoreStateCurrent(flags) {
-    return restoreState(window.getCurrent().label, flags);
+    await restoreState(window.getCurrent().label, flags);
 }
 /**
  *  Get the name of the file used to store window state.
  */
 async function filename() {
-    return core.invoke("plugin:window-state|filename");
+    return await core.invoke("plugin:window-state|filename");
 }
 
 exports.filename = filename;
