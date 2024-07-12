@@ -32,7 +32,7 @@ async function restoreState(label, flags) {
  *  Restore the state for the current window from disk.
  */
 async function restoreStateCurrent(flags) {
-    await restoreState(window.getCurrent().label, flags);
+    await restoreState(window.getCurrentWindow().label, flags);
 }
 /**
  *  Get the name of the file used to store window state.
